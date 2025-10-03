@@ -1,0 +1,55 @@
+# Example terraform.tfvars file
+# Copy this to terraform.tfvars and update with your environment values
+
+# vSphere Connection Settings
+vsphere_user           = "administrator@vsphere.local"
+vsphere_password       = "your-password-here"
+vsphere_server         = "vcenter.yourdomain.com"
+allow_unverified_ssl   = true
+
+# vSphere Infrastructure
+datacenter             = "Datacenter1"
+datastore             = "datastore1"
+cluster               = "Cluster1"
+network_name          = "VM Network"
+vm_folder             = "Terraform VMs"
+
+# VM Templates (must exist in your vCenter)
+windows_template      = "Windows Server 2019 Template"
+ubuntu_template       = "Ubuntu 20.04 Template"
+centos_template       = "CentOS 8 Template"
+
+# Windows VM Configuration
+windows_vm_count      = 2
+windows_vm_prefix     = "win-srv"
+windows_vm_cpu        = 4
+windows_vm_memory     = 8192
+windows_vm_disk_size  = 80
+windows_admin_password = "P@ssw0rd123!"
+windows_timezone      = "020"  # UTC
+windows_vm_ips        = ["192.168.1.10", "192.168.1.11"]
+
+# Ubuntu VM Configuration
+ubuntu_vm_count       = 2
+ubuntu_vm_prefix      = "ubuntu-srv"
+ubuntu_vm_cpu         = 2
+ubuntu_vm_memory      = 4096
+ubuntu_vm_disk_size   = 50
+ubuntu_vm_ips         = ["192.168.1.20", "192.168.1.21"]
+
+# CentOS VM Configuration
+centos_vm_count       = 1
+centos_vm_prefix      = "centos-srv"
+centos_vm_cpu         = 2
+centos_vm_memory      = 4096
+centos_vm_disk_size   = 50
+centos_vm_ips         = ["192.168.1.30"]
+
+# Network Configuration
+ipv4_netmask          = 24
+ipv4_gateway          = "192.168.1.1"
+dns_servers           = ["192.168.1.5", "8.8.8.8"]
+domain_name           = "yourdomain.local"
+
+# Environment
+environment_tag       = "Development"
