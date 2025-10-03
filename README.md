@@ -2,7 +2,7 @@
 
 **Author:** Roberto Raimondo - IS Senior Systems Engineer II - CCOE IA AIDE
 
-This Terraform configuration deploys mixed virtual machines (Windows Server and Linux) on VMware vSphere infrastructure
+This Terraform configuration deploys mixed virtual machines (Windows Server and Linux) on VMware vSphere infrastructure.
 
 ## Prerequisites
 
@@ -244,7 +244,4 @@ For issues and questions:
 1. Check Terraform vSphere provider documentation
 2. Review vSphere logs
 3. Validate network connectivity
-
 4. Verify template configurations
-
-

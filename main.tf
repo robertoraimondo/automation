@@ -59,6 +59,7 @@ resource "vsphere_virtual_machine" "windows_vm" {
   num_cpus = var.windows_vm_cpu
   memory   = var.windows_vm_memory
   guest_id = data.vsphere_virtual_machine.windows_template.guest_id
+  firmware = "efi"
 
   scsi_type = data.vsphere_virtual_machine.windows_template.scsi_type
 
@@ -114,6 +115,7 @@ resource "vsphere_virtual_machine" "linux_vm" {
   num_cpus = var.linux_vm_cpu
   memory   = var.linux_vm_memory
   guest_id = data.vsphere_virtual_machine.linux_template.guest_id
+  firmware = "efi"
 
   scsi_type = data.vsphere_virtual_machine.linux_template.scsi_type
 
